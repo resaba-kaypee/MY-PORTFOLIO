@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/simple-scrollspy.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul id="menu" class="nav-list">
+            <li><a href="#home" class="active" data-scrollspy="#home">Home</a></li>
+            <li><a href="#about" data-scrollspy="#about">About</a></li>
+            <li><a href="#projects" data-scrollspy="#projects">Projects</a></li>
+            <li><a href="#contact" data-scrollspy="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="home" class="scrollspy">
+
+        </section>
+        <section id="about" class="scrollspy">
+          <div class="profile-img">
+            <img src="/img/pic.jpg" alt="">
+          </div>
+          <figure class="profile">
+            <h1>Raven Lalonde</h1>
+            <p>Front End Developer</p>
+            <figcaption class="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
+          </figure>
+        </section>
+        <section id="projects" class="scrollspy"></section>
+        <section id="contact" class="scrollspy"></section>
+      </main>
+    </div>
+
+
+  </body>
+</html>
