@@ -1,8 +1,16 @@
-document.addEventListener('DOMContentLoaded', getElems);
-
 /* SCROLL EFFECT
 -----------------------------------------------------*/
-scrollSpy('#menu');
+new fullpage("#main", {
+  autoScrolling: true,
+  navigation: true,
+  navigationPosition: 'right',
+  navigationTooltips: ["Home", "About", "Projects", "Contact"],
+  showActiveTooltip: true,
+  slidesNavigation: true,
+  slidesNavPosition: 'bottom'
+});
+  
+
 
 /* HOME - TYPE EFFECT
 -----------------------------------------------------*/
@@ -24,7 +32,6 @@ class TypeWriter {
     const fullTxt = this.words[current];
     let typeSpeed = 300;
 
-    // console.log(fullTxt)
     if(this.isDeleting){
       this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
@@ -57,7 +64,7 @@ function getElems(){
   return new TypeWriter(txtElem, words, wait);
 }
 
-// getElems();
+getElems();
 
 
 
@@ -67,20 +74,3 @@ function getElems(){
 
 
 
-
-
-
-
-// const list = document.querySelectorAll('a');
-
-// list.forEach(link => {
-//   link.addEventListener('click', disableLink);
-// })
-
-// function disableLink(e){
-//   const elems = document.querySelector('.active');
-//   if(elems !== null){
-//    elems.classList.remove("active");
-//   }
-//  e.target.className = "active";
-// }

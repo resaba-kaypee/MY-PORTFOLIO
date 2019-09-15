@@ -1,193 +1,219 @@
+@import 'media';
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+
 /* VARIABLES
 -------------------------------*/
-$bottomShadow: 0px 3px 7px 0px rgba(0,0,0,0.58);
+$h1: #666;
+$h2: #a74;
+$bg: #E3E3E3;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+//===============================
+// PAGE LAYOUT
+//===============================
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Comic Sans MS';
+  font-family: 'Livvic', 'Comic Sans MS';
 }
 
-/* HEADER
--------------------------------*/
+.container{
+  // background: url('https://cdn.eso.org/images/large/eso0932a.jpg') no-repeat center center;
+  background: url('https://www.elementaryos-fr.org/wp-content/uploads/2013/09/wallpaper-1406531.jpg') no-repeat center center;
+  background-color: #252934;
+  background-size: cover;
+  background-attachment: fixed;
+  image-rendering: -webkit-optimize-contrast;
+  position: relative;
+}
 
-// .container{
-//   position: relative;
+canvas{
+  position: fixed;
+}
+
+#fp-nav ul li{
+  height: 30px;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+  background-color: aliceblue !important;
+}
+
+.slide {
+  text-align: center;
+  color: aliceblue;
+}
+
+.fp-tooltip {
+  margin-left: 10px;
+}
+
+.fp-slidesNav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.fp-controlArrow{
+  top: 600px;
+  opacity: .2;
+}
+
+.fp-controlArrow:hover{
+  opacity: .7;
+}
+
+.fp-controlArrow.fp-prev{
+  left: 120px;
+}
+
+.fp-controlArrow.fp-next{
+  right: 120px;
+}
+
+//===============================
+// CANVAS
+//===============================
+
+
+
+
+//===============================
+// MAIN SECTIONS
+//===============================
+
+
+/* MAIN - HOME */
+
+.home {
+  color: $h1;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  .landing{
+    position: relative;
+    top: 100px;
+    .name{
+      color: $h2;
+    }
+  }
+  h1, h2 {
+    padding: 0 3rem;
+    font-weight: 600;
+    margin: 0.4rem;
+  }
+  h1 {
+    font-size: 3rem;
+    @include phone {
+      fonst-size: 2.5rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+    }
+    @include desktop {
+      font-size: 3.5rem;
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+    color: $h2;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+  .text {
+    font-size: 3.5rem;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include phone {
+      font-size: 1.5rem;
+    }
+  }
+  .txt-cursor {
+    border-right: 0.2rem solid #777;
+    padding-right: 5px;
+  }
+}
+
+
+/* MAIN - ABOUT */
+.about-wrapper{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  .services{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    .cards{
+      position: relative;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
+  .pic{
+    width: 50%;
+    height: 100%;
+    color: white;
+    font-size: 25px;
+    a{
+      text-decoration: none;
+      color: $h2;
+    }
+  }
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 90%;
+  height: 150px;
+  margin: 50px 0;
+  background-color: rgba($color: #1F1F30, $alpha: 0.7);
+  border-radius: 200px 10px 10px 200px;
+  -moz-border-radius: 200px 10px 10px 200px;
+  -webkit-border-radius: 200px 10px 10px 200px;
+  .card-details{
+    font-size: 25px;
+  }
+  img{
+    width: 145px;
+  }
+}
+
+.pic-wrapper{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  .image-wrapper{
+    img {
+      width: 300px;
+    }
+  }
+  p{
+    padding: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+/* MAIN - PROJECTS */
+// .projects{
 // }
 
-header {
-  width: 100%;
-  height: 90px;
-  background-color: #fff;
-  position: fixed;
-  box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.58),
-              inset 0px 3px 7px 0px rgba(0,0,0,0.58);;
-  // z-index: 999;
-}
+/* MAIN - CONTACT */
+// .contact{
+// }
 
-nav {
-  max-width: 960px;
-  mask-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    #ffffff 25%,
-    #ffffff 75%,
-    rgba(255, 255, 255, 0) 100%);
-  margin: 0 auto;
-  padding: 1px 0;
-  ul {
-    text-align: center;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.2) 25%,
-      rgba(255, 255, 255, 0.2) 75%,
-      rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3),
-      inset 0 0 1px rgba(255, 255, 255, 0.6);
-    }
-  li {
-    display: inline-block;
-  }
-  a {
-    padding: 18px;
-    text-transform: uppercase;
-    color: rgba(0, 35, 122, 0.5);
-    font-size: 18px;
-    text-decoration: none;
-    display: block;
-    &:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
-        inset 0 0 1px rgba(255, 255, 255, 0.6);
-      background: rgba(255, 255, 255, 0.1);
-      color: rgba(0, 35, 122, 0.7);
-    }
-  }
-}
-
-.active {
-  border-bottom: 1px solid red;
-  color: rgba(0, 35, 122, 0.7);
-}
-
-/* MAIN
--------------------------------*/
-
-
-main {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  margin-top: 90px;
-  z-index: -1;
-}
-
-section {
-  width: 100%;
-  height: 100%;
-  box-shadow: $bottomShadow;
-}
-
-
-/* MAIN - HOME
--------------------------------*/
-
-#home {
-  // background-color: red;
-}
-
-
-/* MAIN - ABOUT
--------------------------------*/
-
-#about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .profile-img {
-    width: 250px;
-    // border: 1px solid red;
-    // border-radius: 50%;
-    text-align: center;
-    img {
-      width: 80%;
-      // padding: 10px;
-      // border: 1px solid;
-      // border-radius: 50%;
-      animation: hover 10s infinite;
-    }
-  }
-}
-
-.profile {
-  position: relative;
-  // z-index: -1;
-  top: -50px;
-  width: 350px;
-  height: 250px;
-  text-shadow: #FF875B 1px 0 10px;
-  border-right: none;
-  text-align: center;
-  padding-top: 40px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-              inset 0 0 1px rgba(255, 255, 255, 0.6);
-  animation: hover 10s ease-in infinite;
-
-}
-
-/* MAIN - PROJECTS
--------------------------------*/
-
-#projects {
-  // background-color: black;
-}
-
-/* MAIN - CONTACT
--------------------------------*/
-
-#contact {
-  // background-color: yellow;
-}
-
-
-
-
-
-
-@keyframes hover {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  20% {
-    transform: translate(-3px, 9px);
-  }
-  40% {
-    transform: translate(0px, -8px);
-  }
-  60% {
-    transform: translate(4px, 7px);
-  }
-  80% {
-    transform: translate(-5px, -8px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
