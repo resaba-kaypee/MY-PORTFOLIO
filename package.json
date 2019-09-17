@@ -2,11 +2,15 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "description": "my portfolio website",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.3.0",
+    "nodemailer-mailgun-transport": "^1.4.0"
+  }
 }
