@@ -1,3 +1,5 @@
+import "./style.scss";
+
 /* SCROLL EFFECT
 -----------------------------------------------------*/
 new fullpage("#main", {

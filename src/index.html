@@ -5,14 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="css/fullpage.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
   <script src="https://kit.fontawesome.com/fd5e36f071.js"></script>
-  <script src="js/TweenLite.min.js" defer></script>
-  <script src="js/EasePack.min.js" defer></script>
-  <script src="js/fullPage.min.js" defer></script>
-  <script src="js/canvas.js" defer></script>
-  <script src="js/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"
+    integrity="sha256-C19V3BEZT3jDhm7hctby8ZYhoXDJr0DxagpwB4RIpWc=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <title>My Portfolio</title>
 </head>
 
@@ -23,11 +19,9 @@
     <div id="main">
       <!-- <span class="text" data-wait="3000" data-words='["Web Developer", "Designer", "Creator"]'></span> -->
 
-      <!-- <section class="section home">
+      <section class="section home">
         <div class="landing">
-          <h1>
-            Hello, I'm <span class="name">Kaypee Resaba</span>
-          </h1>
+          <h1>Hello, I'm <span class="name">Kaypee Resaba</span></h1>
           <h1>I am a Front-End Developer</h1>
           <h2>Welcome To My Website :)</h2>
         </div>
@@ -36,11 +30,9 @@
       <section class="section about">
         <div class="about-wrapper flex row">
           <div class="services flex row">
-
             <div class="cards">
-
               <div class="card flex row">
-                <img src="img/icons/iconfinder_meteorite_3285298.png" alt="" />
+                <img src="./assets/img/meteorite.png" alt="" />
                 <p class="card-details">
                   Fast <br />
                   Fast load times and lag free interaction, my highest
@@ -49,31 +41,28 @@
               </div>
 
               <div class="card flex row">
-                <img src="img/icons/iconfinder_galaxy_3285297.png" alt="" />
+                <img src="./assets/img/galaxy.png" alt="" />
                 <p class="card-details">
                   Responsive <br />
-                  My layouts will work on any device, big or small.
+                  My promise that all layouts will work on any device, big or small.
                 </p>
               </div>
 
               <div class="card flex row">
-                <img src="img/icons/iconfinder_starship_3285300.png" alt="" />
+                <img src="./assets/img/starship.png" alt="" />
                 <p class="card-details">
                   Dynamic <br />
                   Websites don't have to be static, I love making pages come
                   to life.
                 </p>
               </div>
-
             </div>
-
           </div>
 
           <div class="pic">
             <div class="pic-wrapper">
-
               <div class="image-wrapper">
-                <img src="/img/icons/profile.png" alt="">
+                <img src="./assets/img/profile.png" alt="" />
               </div>
               <p>
                 I'm a Front-End Developer whose proficient in HTML, CSS,
@@ -81,10 +70,8 @@
                 site to keep track of what I learn.
                 <a href="">Let's Work Together :)</a>
               </p>
-              
             </div>
           </div>
-
         </div>
       </section>
 
@@ -95,17 +82,17 @@
         <div class="slide p3">Project 3</div>
         <div class="slide p4">Project 4</div>
         <div class="slide p5">Project 5</div>
-      </section> -->
+      </section>
 
       <section class="section contact">
         <div class="contact-wrapper">
           <h1 class="response">When do we start? :)</h1>
           <form class="form">
-            <input id="name" type="text" name="name" placeholder="Your Name..." required>
-            <input id="email" type="email" name="email" placeholder="Your Email..." required>
-            <input id="subject" type="text" name="subject" placeholder="Subject...">
+            <input id="name" type="text" name="name" placeholder="Your Name..." required />
+            <input id="email" type="email" name="email" placeholder="Your Email..." required />
+            <input id="subject" type="text" name="subject" placeholder="Subject..." />
             <textarea id="message" name="message" placeholder="Your Message..."></textarea>
-            <input id="submit" class="button" type="submit" value="SUBMIT">
+            <input id="submit" class="button" type="submit" value="SUBMIT" />
           </form>
         </div>
         <footer>
@@ -122,9 +109,10 @@
           </div>
         </footer>
       </section>
-
     </div>
   </div>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js'></script>
 </body>
 
 </html>
