@@ -1,5 +1,6 @@
 @import "scss/media.scss";
-@import "scss/fullpage.css";
+@import "scss/fullpage.scss";
+@import "scss/preload.scss";
 @import url("https://fonts.googleapis.com/css?family=Livvic&display=swap");
 
 /* VARIABLES
@@ -17,13 +18,6 @@ $bg: #e3e3e3;
 *::after {
   box-sizing: border-box;
 }
-
-// *,
-// *::before,
-// *::after,
-// *:hover {
-//   transition: all 0.3s ease-in-out;
-// }
 
 body {
   font-family: "Livvic", "Comic Sans MS";
@@ -100,10 +94,6 @@ canvas {
 }
 
 //===============================
-// CANVAS
-//===============================
-
-//===============================
 // MAIN SECTIONS
 //===============================
 
@@ -160,15 +150,12 @@ canvas {
 
 /* MAIN - ABOUT */
 .about-wrapper {
-  // display: flex;
   text-align: center;
   width: 100%;
   height: 100%;
   .services {
     width: 50%;
     height: 100%;
-    // display: flex;
-    // flex-direction: column;
     align-items: center;
     color: white;
     position: relative;
@@ -190,10 +177,94 @@ canvas {
   }
 }
 
+.about-wrapper{
+  @include tablet{
+    display: block;
+    .services{
+      width: 100%;
+      height: 50%;
+      .cards{
+        top: 0;
+        transform: translateY(0);
+        .card{
+          height: 90px;
+          margin: 5px auto;
+        }
+      }
+      img{
+        width: 90px;
+      }
+      .card-details{
+        font-size: 20px;
+      }
+    }
+    .pic{
+      width: 100%;
+      height: 50%;
+      padding: 40px;
+      .pic-wrapper{
+        top: 0;
+        transform: translateY(0);
+        padding: 40px;
+      }
+      .image-wrapper {
+        img {
+          width: 200px;
+        }
+      }
+      p {
+        font-size: 20px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.about-wrapper{
+  @include phone{
+    display: block;
+    .services{
+      width: 100%;
+      height: 50%;
+      .cards{
+        top: 0;
+        transform: translateY(0);
+        margin-top: 20px;
+        .card{
+          height: 80px;
+          margin: 20px auto;
+        }
+      }
+      img{
+        width: 90px;
+      }
+      .card-details{
+        font-size: 20px;
+      }
+    }
+    .pic{
+      width: 100%;
+      height: 50%;
+      padding: 10px;
+      .pic-wrapper{
+        top: 0;
+        transform: translateY(0);
+        padding: 40px;
+      }
+      .image-wrapper {
+        img {
+          width: 170px;
+        }
+      }
+      p {
+        font-size: 20px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
 .card {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: nowrap;
   width: 90%;
   height: 150px;
   margin: 50px 0;
@@ -223,9 +294,6 @@ canvas {
   }
 }
 
-/* MAIN - PROJECTS */
-// .projects{
-// }
 
 /* MAIN - CONTACT */
 .contact {
@@ -236,6 +304,7 @@ canvas {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     h1 {
       color: $h2;
       font-size: 35px;
@@ -278,19 +347,23 @@ canvas {
   }
 }
 
+.form{
+  @include phone{
+    width: 300px;
+  }
+}
+
 footer {
   position: absolute;
   height: 150px;
   bottom: 0;
   width: 100%;
+  color: $h2;
   background-color: rgba($color: #1f1f30, $alpha: 0.7);
   .icons-wrapper {
-    // display: flex;
-    // flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 5px;
-    // height: 100%;
   }
   .icons {
     font-size: 60px;
@@ -313,6 +386,21 @@ footer {
   }
 }
 
+footer{
+  @include phone{
+  height: 100px;
+  .icons {
+    font-size: 40px;
+    letter-spacing: 20px;
+  }
+  h1{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  }
+}
+
 @keyframes float {
   0% {
     -webkit-transform: translateY(0);
@@ -327,3 +415,20 @@ footer {
     transform: translateY(0);
   }
 }
+
+//===============================
+// PRELOADER
+//===============================
+
+.page-bg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: url('https://www.elementaryos-fr.org/wp-content/uploads/2013/09/wallpaper-1406531.jpg') center;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  z-index: 10;
+}
+

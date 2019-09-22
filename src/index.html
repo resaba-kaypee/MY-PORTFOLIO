@@ -6,19 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <script src="https://kit.fontawesome.com/fd5e36f071.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"
-    integrity="sha256-C19V3BEZT3jDhm7hctby8ZYhoXDJr0DxagpwB4RIpWc=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
   <title>My Portfolio</title>
 </head>
 
 <body>
+  <div class="page-loader">
+    <div class="page-bg"></div>
+    <div class="preloader">
+      <div class="preloader-box">
+        <div>L</div>
+        <div>O</div>
+        <div>A</div>
+        <div>D</div>
+        <div>I</div>
+        <div>N</div>
+        <div>G</div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <canvas id="myCanvas"></canvas>
-
     <div id="main">
-      <!-- <span class="text" data-wait="3000" data-words='["Web Developer", "Designer", "Creator"]'></span> -->
-
       <section class="section home">
         <div class="landing">
           <h1>Hello, I'm <span class="name">Kaypee Resaba</span></h1>
@@ -29,6 +38,21 @@
 
       <section class="section about">
         <div class="about-wrapper flex row">
+
+        <div class="pic">
+            <div class="pic-wrapper">
+              <div class="image-wrapper">
+                <img src="./assets/img/profile.png" alt="" />
+              </div>
+              <p>
+                I'm a Front-End Developer whose proficient in HTML, CSS,
+                JavaScript; plus modern libraries and frameworks, I built this
+                site to keep track of what I learn.
+                <a href="">Let's Work Together :)</a>
+              </p>
+            </div>
+          </div>
+
           <div class="services flex row">
             <div class="cards">
               <div class="card flex row">
@@ -44,7 +68,8 @@
                 <img src="./assets/img/galaxy.png" alt="" />
                 <p class="card-details">
                   Responsive <br />
-                  My promise that all layouts will work on any device, big or small.
+                  My promise that all layouts will work on any device, big or
+                  small.
                 </p>
               </div>
 
@@ -56,20 +81,6 @@
                   to life.
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div class="pic">
-            <div class="pic-wrapper">
-              <div class="image-wrapper">
-                <img src="./assets/img/profile.png" alt="" />
-              </div>
-              <p>
-                I'm a Front-End Developer whose proficient in HTML, CSS,
-                JavaScript; plus modern libraries and frameworks, I built this
-                site to keep track of what I learn.
-                <a href="">Let's Work Together :)</a>
-              </p>
             </div>
           </div>
         </div>
@@ -86,7 +97,7 @@
 
       <section class="section contact">
         <div class="contact-wrapper">
-          <h1 class="response">When do we start? :)</h1>
+          <h1 class="response">When do we start :)</h1>
           <form class="form">
             <input id="name" type="text" name="name" placeholder="Your Name..." required />
             <input id="email" type="email" name="email" placeholder="Your Email..." required />
@@ -111,8 +122,10 @@
       </section>
     </div>
   </div>
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js'></script>
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js'></script>
+
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>
 </body>
 
 </html>
