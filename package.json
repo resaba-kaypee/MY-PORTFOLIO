@@ -12,7 +12,7 @@
   "devDependencies": {
     "css-loader": "^2.1.0",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "file-loader": "^3.0.1",
     "fullpage.js": "^3.0.5",
     "gsap": "^2.1.3",
